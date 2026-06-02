@@ -24,8 +24,11 @@ export default function TodoItem({ todo, toggleTodo, deleteTodo, editTodo }) {
                 <Checkbox
                     id={todo.id}
                     checked={todo.isCompleted}
-                    onChange={() => toggleTodo(todo.id)}
-                >{todo.text}</Checkbox>
+                    onChange={() => toggleTodo(todo.id)}>
+
+                    {todo.text}
+                    <small style={{color: 'gray', marginLeft: '10px'}}> {new Date(todo.createdAt).toLocaleDateString()} </small>
+                </Checkbox>
             }
             {/* 수정중이면 input */}
             {isEditing &&

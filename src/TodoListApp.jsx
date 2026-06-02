@@ -10,6 +10,7 @@ class Todo {
         this.id = Date.now();       //할일 고유 id: 만든시각. new Date().getTime()
         this.text = text;           //할일 내용
         this.isCompleted = false;   //완료 여부: 기본값 false
+        this.createdAt = new Date().toISOString();
     }
 }
 const TODOS_STORAGE_KEY = "todos";
@@ -55,6 +56,7 @@ function TodoListApp() {
             })
         )
     }
+
     const deleteTodo = (id) => {
         //id가 같지 않은 todo만 복사하자(filter())
         setTodos(
