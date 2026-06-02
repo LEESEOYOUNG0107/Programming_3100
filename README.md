@@ -43,3 +43,4 @@ npm create vite@latest .
 - `useNavigate()`
 
 - 3111 이서영  2-8	완료 세리머니?	★★★ 조건부 렌더링, animation/confetti library
+- 3111 이서영  1-1 날짜표시	★ Date, 컴포넌트랜더링
